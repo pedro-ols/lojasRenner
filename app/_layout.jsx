@@ -1,13 +1,50 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { View } from "react-native-web";
+import { View, Image } from "react-native-web";
 
 export default function Layout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#007AFF",
-        tabBarInactiveTintColor: "#8E8E93",
+        headerTitle: () => (
+          <View
+            style={{
+              width: 400,
+              height: 60,
+              flexDirection: "row",
+              gap: 80,
+              justifyContent: "center",
+            }}
+          >
+            <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
+              <Ionicons name="search" color={"#000000"} size={30} />
+            </View>
+
+            <Image
+              source={{
+                  uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Logotipo_das_Lojas_Renner.svg/2560px-Logotipo_das_Lojas_Renner.svg.png",
+                }}
+              style={{
+                  width: 100,
+                  height: 60,
+                }}
+              resizeMode="contain"
+            />
+            <View
+              style={{
+                  flexDirection: "row",
+                  gap: 10,
+                  alignItems: "center",
+                justifyContent: "center",
+            }}
+            >
+              <Ionicons name="heart" color={"#000000"} size={30} />
+              <Ionicons name="bag" color={"#000000"} size={30} />
+            </View>
+          </View>
+        ),
+        tabBarActiveTintColor: "#000000",
+        tabBarInactiveTintColor: "darkgrey",
         tabBarStyle: {
           backgroundColor: "#FFF",
           borderTopWidth: 1,
@@ -23,9 +60,14 @@ export default function Layout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" color={color} size={size} />
+          title: "Início",
+          tabBarIcon: () => (
+            <Image
+              source={{
+                uri: "https://www.agenciaeplus.com.br/wp-content/uploads/2019/09/blogrenner1.jpg",
+              }}
+              style={{ width: 24, height: 24, borderRadius: 12 }}
+            />
           ),
         }}
       />
@@ -34,7 +76,14 @@ export default function Layout() {
         options={{
           title: "Blog",
           tabBarIcon: ({ color, size }) => (
-            <View style={{ width: 15, height: 15, borderRadius: 100, borderWidth: 1 }}/>
+            <View
+              style={{
+                width: 15,
+                height: 15,
+                borderRadius: 100,
+                borderWidth: 1,
+              }}
+            />
           ),
         }}
       />
@@ -43,7 +92,12 @@ export default function Layout() {
         options={{
           title: "Menu",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="menu" color={color} size={size} />
+            <View style={{ flexDirection: "row", gap: 1, flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
+                <View style={{width: 10, height: 10, borderWidth: 2}}></View>
+                <View style={{width: 10, height: 10, borderWidth: 2}}></View>
+                <View style={{width: 10, height: 10, borderWidth: 2}}></View>
+                <View style={{width: 10, height: 10, borderWidth: 2}}></View>
+            </View>
           ),
         }}
       />
