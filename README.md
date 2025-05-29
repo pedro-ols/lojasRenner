@@ -15,12 +15,9 @@ Aqui você encontra o projeto mais elegante, organizado e incrível do universo 
 
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Preview](#-preview)
-- [Funcionalidades](#-funcionalidades)
 - [Como Rodar o Projeto](#-como-rodar-o-projeto)
 - [Estrutura de Pastas](#-estrutura-de-pastas)
 - [Contribua](#-contribua)
-- [Roadmap](#-roadmap)
 - [FAQ](#-faq)
 - [Agradecimentos](#-agradecimentos)
 - [Licença](#-licença)
