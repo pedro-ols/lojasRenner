@@ -6,7 +6,7 @@ Aqui você encontra o projeto mais elegante, organizado e incrível do universo 
 ---
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/placeholder/lojas-renner-banner.png" alt="Banner Lojas Renner" width="80%" />
+    <img src="[https://user-images.githubusercontent.com/placeholder/lojas-renner-banner.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FFicheiro%3ANovo_renner.png&psig=AOvVaw0XFNmA1osQqX-1eSDSs-Id&ust=1748630726550000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjUyqGryY0DFQAAAAAdAAAAABAK)" alt="Banner Lojas Renner" width="80%" />
 </p>
 
 ---
