@@ -75,6 +75,7 @@ export default function Layout() {
         name="blog"
         options={{
           title: "Blog",
+          headerShown: false,
           tabBarIcon: () => (
             <View
               style={{
