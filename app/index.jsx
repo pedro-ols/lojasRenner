@@ -5,10 +5,10 @@ import {
   Image,
   ScrollView,
   TouchableOpacity,
-  Touchable,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import FeaturedSection from "../components/featuredSection.jsx";
+import { Link } from "expo-router";
 
 export default function Home() {
   return (
@@ -34,17 +34,17 @@ export default function Home() {
             paddingHorizontal: 10,
           }}
         >
-          <View style={styles.categoryItem}>
-            <View style={styles.categoryImage}>
+          <Link href={"/path"} style={styles.categoryItem}>
+            <TouchableOpacity style={styles.categoryImage}>
               <Image
                 style={{ height: 70, width: 70, borderRadius: 100 }}
                 source={{
                   uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
                 }}
               />
-            </View>
+            </TouchableOpacity>
             <Text style={styles.categoryTitle}>Ofertas</Text>
-          </View>
+          </Link>
           <View style={styles.categoryItem}>
             <View style={styles.categoryImage}>
               <Image
@@ -123,7 +123,7 @@ export default function Home() {
             <Text style={styles.categoryTitle}>Grandes Marcas</Text>
           </View>
         </ScrollView>
-        <FeaturedSection/>
+        <FeaturedSection />
         <ScrollView horizontal style={styles.tickets}>
           <View style={styles.ticketItem}>
             <Ionicons name="ticket" color={"#000000"} size={30} />
@@ -159,7 +159,7 @@ export default function Home() {
           </Text>
         </View>
       </View>
-      <FeaturedSection/>
+      <FeaturedSection />
       <View style={styles.valentinesDay}>
         <View style={{ width: "80%", height: 100, backgroundColor: "#F5FCFF" }}>
           <Text
@@ -174,12 +174,14 @@ export default function Home() {
           </Text>
         </View>
         <View style={styles.ImagesContainer}>
-          <Image
-            style={styles.perfumeImage}
-            source={{
-              uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-RELOGIOS.jpg",
-            }}
-          />
+          <Link href="/path" asChild>
+            <Image
+              style={styles.perfumeImage}
+              source={{
+                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-RELOGIOS.jpg",
+              }}
+            />
+          </Link>
           <Image
             style={styles.perfumeImage}
             source={{
