@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { View, Image } from "react-native-web";
+import { View, Image} from "react-native-web";
 
 export default function Layout() {
   return (
@@ -75,7 +75,7 @@ export default function Layout() {
         name="blog"
         options={{
           title: "Blog",
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: () => (
             <View
               style={{
                 width: 15,
@@ -91,12 +91,12 @@ export default function Layout() {
         name="menu"
         options={{
           title: "Menu",
-          tabBarIcon: ({ color, size }) => (
-            <View style={{ flexDirection: "row", gap: 1, flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
-                <View style={{width: 10, height: 10, borderWidth: 2}}></View>
-                <View style={{width: 10, height: 10, borderWidth: 2}}></View>
-                <View style={{width: 10, height: 10, borderWidth: 2}}></View>
-                <View style={{width: 10, height: 10, borderWidth: 2}}></View>
+          tabBarIcon: () => (
+            <View style={{ flexDirection: "row", gap: 2, flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
+                <View style={{width: 10, height: 10, borderWidth: 1}}></View>
+                <View style={{width: 10, height: 10, borderWidth: 1}}></View>
+                <View style={{width: 10, height: 10, borderWidth: 1}}></View>
+                <View style={{width: 10, height: 10, borderWidth: 1}}></View>
             </View>
           ),
         }}
