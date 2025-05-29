@@ -1,135 +1,249 @@
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+  Touchable,
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function Home() {
   return (
-    
     <ScrollView>
-    <View style={styles.container}>
-      <View style={styles.buyPerfume}>
-        <Text style={{ color: "white", fontSize: 14 }}>
-          Perfumes Rabanne:{" "}
-          <Text style={{ color: "red", fontSize: 14 }}>
-            TUDO com no mínimo 15% OFF*
-          </Text>{" "}
-          | COMPRAR
-        </Text>
+      <View style={styles.container}>
+        <View style={styles.buyPerfume}>
+          <Text style={{ color: "white", fontSize: 14 }}>
+            Perfumes Rabanne:{" "}
+            <Text style={{ color: "red", fontSize: 14 }}>
+              TUDO com no mínimo 15% OFF*
+            </Text>{" "}
+            | COMPRAR
+          </Text>
+        </View>
+        <View style={{ height: 55 }} />
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={true}
+          style={styles.categories}
+          contentContainerStyle={{
+            alignItems: "center",
+            paddingHorizontal: 10,
+          }}
+        >
+          <View style={styles.categoryItem}>
+            <View style={styles.categoryImage}>
+              <Image
+                style={{ height: 70, width: 70, borderRadius: 100 }}
+                source={{
+                  uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
+                }}
+              />
+            </View>
+            <Text style={styles.categoryTitle}>Ofertas</Text>
+          </View>
+          <View style={styles.categoryItem}>
+            <View style={styles.categoryImage}>
+              <Image
+                style={{ height: 70, width: 70, borderRadius: 100 }}
+                source={{
+                  uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
+                }}
+              />
+            </View>
+            <Text style={styles.categoryTitle}>Acabou de chegar</Text>
+          </View>
+          <View style={styles.categoryItem}>
+            <View style={styles.categoryImage}>
+              <Image
+                style={{ height: 70, width: 70, borderRadius: 100 }}
+                source={{
+                  uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
+                }}
+              />
+            </View>
+            <Text style={styles.categoryTitle}>Feminino</Text>
+          </View>
+          <View style={styles.categoryItem}>
+            <View style={styles.categoryImage}>
+              <Image
+                style={{ height: 70, width: 70, borderRadius: 100 }}
+                source={{
+                  uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
+                }}
+              />
+            </View>
+            <Text style={styles.categoryTitle}>Infantil</Text>
+          </View>
+          <View style={styles.categoryItem}>
+            <View style={styles.categoryImage}>
+              <Image
+                style={{ height: "100%", width: "100%", borderRadius: 100 }}
+                source={{
+                  uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
+                }}
+              />
+            </View>
+            <Text style={styles.categoryTitle}>Beleza</Text>
+          </View>
+          <View style={styles.categoryItem}>
+            <View style={styles.categoryImage}>
+              <Image
+                style={{ height: 70, width: 70, borderRadius: 100 }}
+                source={{
+                  uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
+                }}
+              />
+            </View>
+            <Text style={styles.categoryTitle}>Masculino</Text>
+          </View>
+          <View style={styles.categoryItem}>
+            <View style={styles.categoryImage}>
+              <Image
+                style={{ height: 70, width: 70, borderRadius: 100 }}
+                source={{
+                  uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
+                }}
+              />
+            </View>
+            <Text style={styles.categoryTitle}>Ashua Plus Size</Text>
+          </View>
+          <View style={styles.categoryItem}>
+            <View style={styles.categoryImage}>
+              <Image
+                style={{ height: 70, width: 70, borderRadius: 100 }}
+                source={{
+                  uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
+                }}
+              />
+            </View>
+            <Text style={styles.categoryTitle}>Grandes Marcas</Text>
+          </View>
+        </ScrollView>
+        <ScrollView horizontal style={styles.featured}>
+          <View style={styles.featuredItem}>
+            <Image
+              style={{ width: "100%", height: "100%" }}
+              source={{
+                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-FEM-BLUSAS.jpg",
+              }}
+            />
+            <TouchableOpacity style={styles.featuredButton}>
+              <Text style={styles.buyButtonText}>COMPRAR</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.featuredItem}>
+            <Image
+              style={{ width: "100%", height: "100%" }}
+              source={{
+                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-FEM-CASACOSJAQUETAS.jpg",
+              }}
+            />
+            <TouchableOpacity style={styles.featuredButton}>
+              <Text style={styles.buyButtonText}>COMPRAR</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.featuredItem}>
+            <Image
+              style={{ width: "100%", height: "100%" }}
+              source={{
+                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-FEM-VESTIDOS.jpg",
+              }}
+            />
+            <TouchableOpacity style={styles.featuredButton}>
+              <Text style={styles.buyButtonText}>COMPRAR</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+        <ScrollView horizontal style={styles.tickets}>
+          <View style={styles.ticketItem}>
+            <Ionicons name="ticket" color={"#000000"} size={30} />
+            <Text style={{ fontSize: 16, color: "black" }}>
+              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                Cupom VOUDEAPP
+              </Text>{" "}
+              15% OFF na sua primeira compra*
+            </Text>
+          </View>
+          <View style={styles.ticketItem}>
+            <Ionicons name="car" color={"#000000"} size={30} />
+            <Text style={{ fontSize: 16, color: "black" }}>
+              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                Cupom VOUDEAPP
+              </Text>{" "}
+              15% OFF na sua primeira compra*
+            </Text>
+          </View>
+          <View style={styles.ticketItem}>
+            <Ionicons name="ticket" color={"#000000"} size={30} />
+            <Text style={{ fontSize: 16, color: "black" }}>
+              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                Cupom VOUDEAPP
+              </Text>{" "}
+              15% OFF na sua primeira compra*
+            </Text>
+          </View>
+        </ScrollView>
+        <View style={{ height: 30, alignItems: "center", width: "100%" }}>
+          <Text style={{ fontSize: 13.5, color: "grey", textAlign: "center" }}>
+            *consulte as condições em www.lojasrenner.com.br/regulamentos
+          </Text>
+        </View>
       </View>
-      <View style={{ height: 55 }} />
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={true}
-        style={styles.categories}
-        contentContainerStyle={{ alignItems: "center", paddingHorizontal: 10 }}
-      >
-        <View style={styles.categoryItem}>
-          <View style={styles.categoryImage}>
-            <Image
-              style={{ height: 70, width: 70, borderRadius: 100 }}
-              source={{
-                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
-              }}
-            />
-          </View>
-          <Text style={styles.categoryTitle}>Ofertas</Text>
-        </View>
-        <View style={styles.categoryItem}>
-          <View style={styles.categoryImage}>
-            <Image
-              style={{ height: 70, width: 70, borderRadius: 100 }}
-              source={{
-                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
-              }}
-            />
-          </View>
-          <Text style={styles.categoryTitle}>Acabou de chegar</Text>
-        </View>
-        <View style={styles.categoryItem}>
-          <View style={styles.categoryImage}>
-            <Image
-              style={{ height: 70, width: 70, borderRadius: 100 }}
-              source={{
-                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
-              }}
-            />
-          </View>
-          <Text style={styles.categoryTitle}>Feminino</Text>
-        </View>
-        <View style={styles.categoryItem}>
-          <View style={styles.categoryImage}>
-            <Image
-              style={{ height: 70, width: 70, borderRadius: 100 }}
-              source={{
-                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
-              }}
-            />
-          </View>
-          <Text style={styles.categoryTitle}>Infantil</Text>
-        </View>
-        <View style={styles.categoryItem}>
-          <View style={styles.categoryImage}>
-            <Image
-              style={{ height: "100%", width: "100%", borderRadius: 100 }}
-              source={{
-                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
-              }}
-            />
-          </View>
-          <Text style={styles.categoryTitle}>Beleza</Text>
-        </View>
-        <View style={styles.categoryItem}>
-          <View style={styles.categoryImage}>
-            <Image
-              style={{ height: 70, width: 70, borderRadius: 100 }}
-              source={{
-                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
-              }}
-            />
-          </View>
-          <Text style={styles.categoryTitle}>Masculino</Text>
-        </View>
-        <View style={styles.categoryItem}>
-          <View style={styles.categoryImage}>
-            <Image
-              style={{ height: 70, width: 70, borderRadius: 100 }}
-              source={{
-                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
-              }}
-            />
-          </View>
-          <Text style={styles.categoryTitle}>Ashua Plus Size</Text>
-        </View>
-        <View style={styles.categoryItem}>
-          <View style={styles.categoryImage}>
-            <Image
-              style={{ height: 70, width: 70, borderRadius: 100 }}
-              source={{
-                uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-CASACOSJAQUETAS.jpg",
-              }}
-            />
-          </View>
-          <Text style={styles.categoryTitle}>Grandes Marcas</Text>
-        </View>
-      </ScrollView>
-      <ScrollView
-      horizontal
-      style={styles.featured}
-      >
+      <ScrollView horizontal style={styles.featured}>
         <View style={styles.featuredItem}>
+          <Image
+            style={{ width: "100%", height: "100%" }}
+            source={{
+              uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-FEM-BLUSAS.jpg",
+            }}
+          />
+          <TouchableOpacity style={styles.featuredButton}>
+            <Text style={styles.buyButtonText}>COMPRAR</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.featuredItem}>
+          <Image
+            style={{ width: "100%", height: "100%" }}
+            source={{
+              uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-FEM-CASACOSJAQUETAS.jpg",
+            }}
+          />
+          <TouchableOpacity style={styles.featuredButton}>
+            <Text style={styles.buyButtonText}>COMPRAR</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.featuredItem}>
+          <Image
+            style={{ width: "100%", height: "100%" }}
+            source={{
+              uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-FEM-VESTIDOS.jpg",
+            }}
+          />
+          <TouchableOpacity style={styles.featuredButton}>
+            <Text style={styles.buyButtonText}>COMPRAR</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
-      <View style={styles.dfjbjdf}></View>
-    </View>
-    <View>
-    </View>
+      <View style={styles.valentinesDay}>
+        <View style={{ width: "80%", height: 100, backgroundColor: "#F5FCFF" }}>
+          <Text style={{ fontSize: 21, fontWeight: "bold", color: "#0c1d20", marginTop: 20 }}>
+            OPÇÕES CERTAS PARA O DIA DOS NAMORADOS
+          </Text>
+        </View>
+        <View style={styles.ImagesContainer}>
+            <Image style={styles.perfumeImage}source={{ uri:"https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-RELOGIOS.jpg" }}/>
+            <Image style={styles.perfumeImage}source={{ uri:"https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-RELOGIOS.jpg" }}/>
+        </View>
+      </View>
     </ScrollView>
   );
 }
 const styles = StyleSheet.create({
   container: {
     // flex: 1,
-    backgroundColor: "#F5FCFF",
+    backgroundColor: "#ffffff",
   },
   buyPerfume: {
     width: "100%",
@@ -180,20 +294,62 @@ const styles = StyleSheet.create({
   },
   featured: {
     width: "100%",
-    height: 550,
+    height: 450,
     flexDirection: "row",
-  },
-  dfjbjdf: {
-    width: "100%",
-    height: 100,
-    backgroundColor: "red",
-    position: "absolute",
-    bottom: 0,
-    zIndex: 1,
   },
   featuredItem: {
     width: 430,
     height: 450,
     backgroundColor: "blue",
-  }
+  },
+  featuredButton: {
+    zIndex: 1,
+    position: "absolute",
+    width: 180,
+    height: 60,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 370,
+    marginLeft: 125,
+  },
+  buyButtonText: {
+    color: "black",
+    fontSize: 23,
+    fontFamily: "arial",
+    fontWeight: "semibold",
+  },
+  tickets: {
+    width: "100%",
+    height: 100,
+    bottom: 0,
+    padding: 20,
+  },
+  ticketItem: {
+    width: 350,
+    height: 65,
+    borderRadius: 5,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    paddingHorizontal: 20,
+    backgroundColor: "#DDDDDD",
+    marginHorizontal: 10,
+  },
+  valentinesDay: {
+    width: "100%",
+    height: 400,
+    backgroundColor: "#F5FCFF",
+    padding: 20,
+  },
+  perfumeImage: {
+    width: "40%",
+    height: 240,
+    marginTop: 20,
+  },
+  ImagesContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+  },
 });
