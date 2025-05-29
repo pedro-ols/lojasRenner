@@ -4,10 +4,18 @@ import { Link } from 'expo-router';
 
 export default function Cards() {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <View style={{ flex: 1,  alignItems: 'center' }}>
+            <View style={{
+                width: '100%',
+                padding: 10,
+                }}>
+                <Text style={{ fontSize: 20, color: 'Black' }}>
+                    Olá, informe seu CPF
+                </Text>
+            </View>
             <Image
                 source={require('../assets/cartaoRenner.png')}
-                style={{ width: 150, height: 150 }}
+                style={{ width: 150, height: 150, marginTop: 60}}
             />
 
             <View style={styles.cpf}>

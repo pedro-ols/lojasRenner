@@ -105,6 +105,7 @@ export default function Layout() {
         name="cards"
         options={{
           title: "Cartões",
+          headerShown: false,
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="card" color={color} size={size} />
           ),
