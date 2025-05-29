@@ -185,15 +185,65 @@ export default function Home() {
             </Text>
           </View>
         </ScrollView>
+        <View style={{ height: 30, alignItems: "center", width: "100%" }}>
+          <Text style={{ fontSize: 13.5, color: "grey", textAlign: "center" }}>
+            *consulte as condições em www.lojasrenner.com.br/regulamentos
+          </Text>
+        </View>
       </View>
-      <View></View>
+      <ScrollView horizontal style={styles.featured}>
+        <View style={styles.featuredItem}>
+          <Image
+            style={{ width: "100%", height: "100%" }}
+            source={{
+              uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-FEM-BLUSAS.jpg",
+            }}
+          />
+          <TouchableOpacity style={styles.featuredButton}>
+            <Text style={styles.buyButtonText}>COMPRAR</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.featuredItem}>
+          <Image
+            style={{ width: "100%", height: "100%" }}
+            source={{
+              uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-FEM-CASACOSJAQUETAS.jpg",
+            }}
+          />
+          <TouchableOpacity style={styles.featuredButton}>
+            <Text style={styles.buyButtonText}>COMPRAR</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.featuredItem}>
+          <Image
+            style={{ width: "100%", height: "100%" }}
+            source={{
+              uri: "https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-FEM-VESTIDOS.jpg",
+            }}
+          />
+          <TouchableOpacity style={styles.featuredButton}>
+            <Text style={styles.buyButtonText}>COMPRAR</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+      <View style={styles.valentinesDay}>
+        <View style={{ width: "80%", height: 100, backgroundColor: "#F5FCFF" }}>
+          <Text style={{ fontSize: 21, fontWeight: "bold", color: "#0c1d20", marginTop: 20 }}>
+            OPÇÕES CERTAS PARA O DIA DOS NAMORADOS
+          </Text>
+        </View>
+        <View style={styles.ImagesContainer}>
+            <Image style={styles.perfumeImage}source={{ uri:"https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-RELOGIOS.jpg" }}/>
+            <Image style={styles.perfumeImage}source={{ uri:"https://img.lojasrenner.com.br/banner/01-home/250522_HOME_APOSTAS_NAMORADOS-MASC-RELOGIOS.jpg" }}/>
+        </View>
+      </View>
     </ScrollView>
   );
 }
 const styles = StyleSheet.create({
   container: {
     // flex: 1,
-    backgroundColor: "#F5FCFF",
+    backgroundColor: "#ffffff",
   },
   buyPerfume: {
     width: "100%",
@@ -244,7 +294,7 @@ const styles = StyleSheet.create({
   },
   featured: {
     width: "100%",
-    height: 550,
+    height: 450,
     flexDirection: "row",
   },
   featuredItem: {
@@ -272,9 +322,8 @@ const styles = StyleSheet.create({
   tickets: {
     width: "100%",
     height: 100,
-    position: "absolute",
     bottom: 0,
-    paddingVertical: 20,
+    padding: 20,
   },
   ticketItem: {
     width: 350,
@@ -286,5 +335,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     backgroundColor: "#DDDDDD",
     marginHorizontal: 10,
+  },
+  valentinesDay: {
+    width: "100%",
+    height: 400,
+    backgroundColor: "#F5FCFF",
+    padding: 20,
+  },
+  perfumeImage: {
+    width: "40%",
+    height: 240,
+    marginTop: 20,
+  },
+  ImagesContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
   },
 });
