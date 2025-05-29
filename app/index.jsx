@@ -2,6 +2,8 @@ import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 
 export default function Home() {
   return (
+    
+    <ScrollView>
     <View style={styles.container}>
       <View style={styles.buyPerfume}>
         <Text style={{ color: "white", fontSize: 14 }}>
@@ -108,14 +110,25 @@ export default function Home() {
           <Text style={styles.categoryTitle}>Grandes Marcas</Text>
         </View>
       </ScrollView>
-      
+      <ScrollView
+      horizontal
+      style={styles.featured}
+      >
+        <View style={styles.featuredItem}>
+        </View>
+        <View style={styles.featuredItem}>
+        </View>
+      </ScrollView>
+      <View style={styles.dfjbjdf}></View>
     </View>
+    <View>
+    </View>
+    </ScrollView>
   );
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: "center",
+    // flex: 1,
     backgroundColor: "#F5FCFF",
   },
   buyPerfume: {
@@ -131,15 +144,14 @@ const styles = StyleSheet.create({
   categories: {
     flexDirection: "row",
     width: "100%",
-    height: 110,
+    height: 150,
     padding: 2,
     gap: 5,
     paddingTop: 15,
-    backgroundColor: "green",
   },
   categoryItem: {
     width: 95,
-    height: 100,
+    height: "100%",
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "center",
@@ -157,7 +169,6 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 0.5 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-    // Sombra Android
     elevation: 5,
   },
   categoryTitle: {
@@ -169,7 +180,20 @@ const styles = StyleSheet.create({
   },
   featured: {
     width: "100%",
-    height: 400,
-    backgroundColor: "yellow",
+    height: 550,
+    flexDirection: "row",
   },
+  dfjbjdf: {
+    width: "100%",
+    height: 100,
+    backgroundColor: "red",
+    position: "absolute",
+    bottom: 0,
+    zIndex: 1,
+  },
+  featuredItem: {
+    width: 430,
+    height: 450,
+    backgroundColor: "blue",
+  }
 });
